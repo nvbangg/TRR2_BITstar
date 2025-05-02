@@ -1,0 +1,13 @@
+\contentsline {chapter}{\bf Danh sách hình vẽ}{iii}{chapter*.1}%
+\contentsline {chapter}{\bf Danh sách bảng}{iv}{chapter*.2}%
+\contentsline {chapter}{Danh sách các ký hiệu và chữ viết tắt}{v}{chapter*.3}%
+\contentsline {chapter}{\vspace *{-8pt} Mở đầu}{1}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Kiến thức chuẩn bị}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Thuật toán Quickhull}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Sơ lược về ............ }{4}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Ứng dụng .................}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Thặng dư bậc hai và ứng dụng}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Phương trình đồng dư bậc hai..........}{6}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {3}Một số kết quả tính toán }{8}{chapter.3}%
+\contentsline {chapter}{\vspace *{-8pt} Kết luận}{10}{chapter*.5}%
+\contentsline {chapter}{\vspace *{-8pt} Tài liệu tham khảo}{11}{chapter*.6}%
