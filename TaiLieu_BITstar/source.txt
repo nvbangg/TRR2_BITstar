@@ -1,0 +1,8 @@
+https://robotic-esp.com/code/bitstar/
+    https://arxiv.org/pdf/1405.5848 (file BIT.pdf)
+    https://arxiv.org/pdf/1707.01888 (file BITstar.pdf)
+        https://journals.sagepub.com/doi/10.1177/0278364919890396 (bản web của BITstar.pdf)
+    https://robotic-esp.com/papers/gammell_phd17 (file Grammell....pdf)
+
+https://arxiv.org/pdf/2302.11670 (file bitstar2.pdf)
+https://github.com/marleyshan21/Batch-informed-trees
