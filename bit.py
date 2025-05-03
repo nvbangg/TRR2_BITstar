@@ -38,7 +38,6 @@ class Node:
         self.parent = self
 
     def __lt__(self, other):
-        # So sánh theo giá trị cost() trước
         self_cost = self.cost()
         other_cost = other.cost()
         if self_cost == other_cost:
@@ -114,7 +113,6 @@ class BITStar:
 
     def cap_nhat_r(self):
         n = max(1, len(self.V) + len(self.X_unconn))
-        # Cập nhật công thức tính bán kính theo new.py
         return (
             2
             * 1.1
@@ -125,7 +123,6 @@ class BITStar:
     def gia_tri_tot_nhat(self, queue):
         if not queue:
             return INF
-        # Cập nhật để sử dụng cost thay vì chỉ giá trị prioritize
         if isinstance(queue[0], tuple):
             return queue[0][0]
         else:
@@ -162,7 +159,6 @@ class BITStar:
                 w.g_T = INF
                 w.parent = w
 
-        # Chuyển các đỉnh có g_T = INF sang X_unconn
         to_move = [v for v in self.V if v.g_T == INF]
         self.X_unconn.extend(to_move)
         self.V = [v for v in self.V if v.g_T < INF]
@@ -177,12 +173,10 @@ class BITStar:
 
     def hang_doi_canh(self, v, x):
         if v.g_T < INF:
-            # Cập nhật với giá trị cost()
             cost_val = v.g_T + self.khoang_cach(v, x) + x.h
             heapq.heappush(self.Q_E, (cost_val, (v, x)))
 
     def hang_doi_dinh(self, v):
-        # Sử dụng cost() thay vì g_T + h
         heapq.heappush(self.Q_V, (v.cost(), v))
 
     def mo_rong_dinh(self):
@@ -204,7 +198,7 @@ class BITStar:
             ):
                 self.hang_doi_canh(v, x)
 
-        # Xử lý đỉnh đã có trong V nhưng không cũ
+        # Xử lý đỉnh đã có trong V
         if v not in self.V_old:
             for w in self.V:
                 if v != w and w not in self.edge_dict.get(v, []):
@@ -287,22 +281,17 @@ class BITStar:
             if not self.co_va_cham(v_m, x_m) and g_T_vm + kc + x_m.h < self.nut_end.g_T:
                 # Cập nhật đồ thị
                 if x_m in self.V:
-                    # Xóa cạnh đến x_m
                     self.E = [(v, w) for v, w in self.E if w != x_m]
                     for v in list(self.edge_dict.keys()):
                         if x_m in self.edge_dict[v]:
                             self.edge_dict[v].remove(x_m)
                     x_m.parent, x_m.g_T = x_m, INF
                 else:
-                    # Thêm x_m vào đồ thị
                     self.X_unconn.remove(x_m)
                     self.V.append(x_m)
                     self.hang_doi_dinh(x_m)
-
-                # Thêm cạnh và cập nhật hàng đợi
                 self.them_canh(v_m, x_m)
 
-                # Cập nhật Q_E loại bỏ các cạnh không còn cần thiết
                 x_m_g_T = x_m.g_T
                 self.Q_E = [
                     (c, (v, x))
