@@ -21,7 +21,7 @@ WIDTH, HEIGHT = SIZE_MAP = (1200, 600)
 SO_VAT = 20
 SIZE_VAT = (100, 100)
 START = (200, HEIGHT - 200)
-END = (WIDTH - 200, 200)
+GOAL = (WIDTH - 200, 200)
 MAX_SO_LAN_LAP = 10
 SIZE_LO = 25
 R_NUT = 3
@@ -29,16 +29,24 @@ DO_RONG_CANH = 2
 
 
 class Node:
-    def __init__(self, state, x_start, x_goal):
+    def __init__(self, state):
         self.state = state
-        self.g = self._khoang_cach(state, x_start)
-        self.h = self._khoang_cach(state, x_goal)
+        self.g = self._khoang_cach(state, START)
+        self.h = self._khoang_cach(state, GOAL)
         self.f = self.g + self.h
         self.g_T = INF
         self.parent = self
 
     def __lt__(self, other):
-        return self.g_T < other.g_T
+        # So sánh theo giá trị cost() trước
+        self_cost = self.cost()
+        other_cost = other.cost()
+        if self_cost == other_cost:
+            return self.g_T < other.g_T
+        return self_cost < other_cost
+
+    def cost(self):
+        return min(self.g_T + self.h, INF)
 
     @staticmethod
     def _khoang_cach(pos1, pos2):
@@ -59,9 +67,9 @@ class BITStar:
         self.vat_vat = []
         self.edge_dict = defaultdict(list)
 
-        self.nut_start = Node(START, START, END)
+        self.nut_start = Node(START)
         self.nut_start.g_T = 0
-        self.nut_end = Node(END, START, END)
+        self.nut_end = Node(GOAL)
         self.V.append(self.nut_start)
 
         self.r = INF
@@ -82,7 +90,7 @@ class BITStar:
         if self.c_i == INF:
             return True
         dist_start = math.hypot(state[0] - START[0], state[1] - START[1])
-        dist_goal = math.hypot(state[0] - END[0], state[1] - END[1])
+        dist_goal = math.hypot(state[0] - GOAL[0], state[1] - GOAL[1])
         return dist_start + dist_goal <= self.c_i
 
     def co_va_cham(self, v, w):
@@ -106,12 +114,22 @@ class BITStar:
 
     def cap_nhat_r(self):
         n = max(1, len(self.V) + len(self.X_unconn))
+        # Cập nhật công thức tính bán kính theo new.py
         return (
-            2.2 * (1.5 * (WIDTH * HEIGHT / math.pi) ** 0.5) * (math.log(n) / n) ** 0.5
+            2
+            * 1.1
+            * ((1 + 1 / 2) * (WIDTH * HEIGHT / math.pi) ** 0.5)
+            * ((math.log(n) / n) ** 0.5)
         )
 
     def gia_tri_tot_nhat(self, queue):
-        return queue[0][0] if queue else INF
+        if not queue:
+            return INF
+        # Cập nhật để sử dụng cost thay vì chỉ giá trị prioritize
+        if isinstance(queue[0], tuple):
+            return queue[0][0]
+        else:
+            return queue[0].cost()
 
     def tao_vat(self):
         for _ in range(SO_VAT):
@@ -121,7 +139,7 @@ class BITStar:
                     random.randint(0, HEIGHT - SIZE_VAT[1]),
                 )
                 obs = pygame.Rect(pos, SIZE_VAT)
-                if not (obs.collidepoint(START) or obs.collidepoint(END)):
+                if not (obs.collidepoint(START) or obs.collidepoint(GOAL)):
                     self.vat_vat.append(obs)
                     break
 
@@ -159,10 +177,13 @@ class BITStar:
 
     def hang_doi_canh(self, v, x):
         if v.g_T < INF:
-            heapq.heappush(self.Q_E, (v.g_T + self.khoang_cach(v, x) + x.h, (v, x)))
+            # Cập nhật với giá trị cost()
+            cost_val = v.g_T + self.khoang_cach(v, x) + x.h
+            heapq.heappush(self.Q_E, (cost_val, (v, x)))
 
     def hang_doi_dinh(self, v):
-        heapq.heappush(self.Q_V, (v.g_T + v.h, v))
+        # Sử dụng cost() thay vì g_T + h
+        heapq.heappush(self.Q_V, (v.cost(), v))
 
     def mo_rong_dinh(self):
         _, v = heapq.heappop(self.Q_V)
@@ -308,13 +329,13 @@ class BITStar:
 
         # Vẽ các vật và điểm đầu cuối
         pygame.draw.circle(self.screen, RED, START, R_NUT + 5)
-        pygame.draw.circle(self.screen, RED, END, R_NUT + 5)
+        pygame.draw.circle(self.screen, RED, GOAL, R_NUT + 5)
         for obs in self.vat_vat:
             pygame.draw.rect(self.screen, BLACK, obs)
 
         # Vẽ elip
         if self.c_i != INF:
-            sx, sy, gx, gy = START[0], START[1], END[0], END[1]
+            sx, sy, gx, gy = START[0], START[1], GOAL[0], GOAL[1]
             cx, cy = (sx + gx) / 2, (sy + gy) / 2
             dx, dy = gx - sx, gy - sy
             dist = math.hypot(dx, dy)
@@ -409,7 +430,7 @@ class BITStar:
             attempts += 1
             state = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
             if self.trong_vat(state) and self.trong_elip(state):
-                samples.append(Node(state, START, END))
+                samples.append(Node(state))
         return samples
 
 
