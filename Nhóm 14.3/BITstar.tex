@@ -12,6 +12,7 @@
 \usepackage[mathscr]{eucal}
 \usepackage[top=3.5cm, bottom=3.0cm, left=3.5cm, right=2cm] {geometry}
 \usepackage{fancybox}
+\usepackage{media9}
 %==================================  
 \newtheorem{dl}{Định lý}[section]
 \newtheorem{dn}[dl]{Định nghĩa} 
@@ -27,7 +28,7 @@
 \newtheorem{cy}[dl]{Chú ý} 
 \newtheorem{vd}[dl]{Ví dụ} 
 \usepackage{hyperref}
-\renewcommand{\chaptername}{Chương \chaptername}
+\renewcommand{\chaptername}{Mục \chaptername}
 \renewcommand\bibname{Tài liệu tham khảo}
 %.....................................
 
@@ -91,9 +92,9 @@
 	%========================================
 	\pagestyle{fancy}
 	\fancyhf{}
-	\fancyhead[L]{Đồ án tốt nghiệp đại học} % Di chuyển header về bên trái
+	\fancyhead[L]{Bài tập lớn toán rời rạc 2} % Di chuyển header về bên trái
 	\renewcommand{\headrulewidth}{0.4pt} % Gạch dưới header
-	\fancyfoot[L]{Nguyễn Văn A - D19HTTT01 }
+	\fancyfoot[L]{Nhóm 3 BTL TRR2 }
 	\fancyfoot[R]{\roman{page}} % Số trang theo chữ số La mã ở bên phải của footer
 	\renewcommand{\footrulewidth}{0.4pt} % Dòng kẻ trên footer
 	
@@ -102,59 +103,8 @@
 	%==============================================
 %\pagenumbering{roman}
 
-\newgeometry{top=2.0cm,bottom=3.0cm,left=3.0cm,right=2.8cm}
-\setlength{\fboxrule}{1.5pt}
-\thisfancypage{\setlength{\fboxsep}{10pt}\setlength{\shadowsize}{0pt}\doublebox}{}
-
-\begin{titlepage}
-\fontsize{14pt}{14pt}\selectfont \baselineskip 0.65cm
-\thispagestyle{empty}
-\begin{center}
-{HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG}\\
-\textbf{\MakeUppercase{KHOA CÔNG NGHỆ THÔNG TIN I}}\\
-\centerline{--------------------o0o--------------------}  
-\end{center}
- 
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=6cm]{./logo}
-	\end{center}
-\end{figure} 
- 
- 
-\vspace{0.5cm}
-\begin{center}
-\textbf{\MakeUppercase{\LARGE \bf ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC}}\\ 
-\end{center} 
-
-\vspace{1cm}
-\begin{center}
-	Đề tài: 
-	\textbf{\MakeUppercase{ \bf ``MỘT THUẬT TOÁN HIỆU QUẢ DỰA TRÊN CẠNH ĐỂ TỐI ƯU LỀ PHÂN LOẠI TRONG MẶT PHẲNG''}}\\ 
-\end{center} 
-\vspace{2cm}
 
 
-\begin{tabular}{ll}
-	{\textbf{\large{Giảng Viên Hướng Dẫn: }}} & {\textbf{\large{TS. Nguyễn Kiều Linh}}} \\
-	{\textbf{\large{Sinh viên thực hiện:}}}  & {\textbf{\large{Nguyễn Văn A}}} \\
-	{\textbf{\large{Mã sinh viên: }}}  & {\textbf{\large{BXXDCCNYYY}}} \\
-	{\textbf{\large{Lớp:}}}   & {\textbf{\large{DXHTTTY}}}\\
-	{\textbf{\large{Niên khóa:}}}   & {\textbf{\large{20xx-20xx}}}\\
-	{\textbf{\large{Hệ đào tạo:}}}   & {\textbf{\large{Đại học chính quy}}}
-\end{tabular}
-
-
-
-
-
-
-\vfill
-\begin{center}
-{{\bf Hà Nội, 12/2023}}
-\end{center}
-\end{titlepage}
 
 \newgeometry{top=2.0cm,bottom=3.0cm,left=3.0cm,right=2.8cm}
 \setlength{\fboxrule}{1.5pt}
@@ -179,34 +129,57 @@
 
 \vspace{0.5cm}
 \begin{center}
-	\textbf{\MakeUppercase{\LARGE \bf ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC}}\\ 
+	\textbf{\MakeUppercase{\LARGE \bf Bài tập lớn toán rời rạc 2}}\\ 
 \end{center} 
 
 \vspace{1cm}
 \begin{center}
 \textbf{Đề tài:}
-	\textbf{\MakeUppercase{ \bf ``MỘT THUẬT TOÁN HIỆU QUẢ DỰA TRÊN CẠNH ĐỂ TỐI ƯU LỀ PHÂN LOẠI TRONG MẶT PHẲNG''}}\\ 
+	\textbf{\MakeUppercase{ \bf ``Thuật toán Batch-Informed RRT* (BIT*)''}}\\ 
 \end{center} 
 \vspace{2cm}
 
 
 \begin{tabular}{ll}
 	{\textbf{\large{Giảng Viên Hướng Dẫn: }}} & {\large TS. Nguyễn Kiều Linh}\\
-	{\textbf{\large{Sinh viên thực hiện:}}}  & {\large Nguyễn Văn A} \\
-	{\textbf{\large{Mã sinh viên: }}}  & {\large BXXDCCNYYY} \\
-	{\textbf{\large{Lớp:}}}   & {\large DXHTTTY}\\
-	{\textbf{\large{Niên khóa:}}}   & {\large 20xx-20xx}\\
+	{\textbf{\large{Nhóm thực hiện:}}}  & {\large Nhóm 3} \\
+	{\textbf{\large{Lớp:}}}   & {\large Nhóm 14 Toán rời rạc 2}\\
 	{\textbf{\large{Hệ đào tạo:}}}   & {\large Đại học chính quy}
 \end{tabular}
 
 
 \vfill
 \begin{center}
-	{{\bf Hà Nội, 12/2023}}
+	{{\bf Hà Nội, 05/2025}}
 \end{center}
 
-
-
+\newpage
+%===========table============
+{\fontsize{20}{24}\selectfont \textbf{Bảng phân công công việc}} % Tiêu đề cỡ chữ 20pt
+\vspace{1em} % Khoảng cách giữa tiêu đề và bảng
+\begin{center}
+\begin{tabular}{|c|l|c|l|}
+\hline
+\textbf{STT} & \textbf{Họ và tên} & \textbf{Mã sinh viên} & \textbf{Công việc} \\
+\hline
+1 & Nguyễn Đức Toàn & B23DCCN831 & Code báo cáo \\
+\hline
+2 & Trần Thu Thiên & B23DCCN785 & Làm slide, thuyết trình \\
+\hline
+3 & Hoàng Xuân Vinh & B23DCCN929 & Code báo cáo \\
+\hline
+4 & Nguyễn Thị Uyên & B23DCCN912 & Soạn nội dung \\
+\hline
+5 & Trần Đăng Dương & B23DCCN227 & Soạn nội dung \\
+\hline
+6 & Nguyễn Văn Bằng & B23DCCN067 & Code thuật toán, soạn nội dung \\
+\hline
+7 & Đại Đức Hiếu & B23DCCN297 & Code báo cáo \\
+\hline
+8 & Nguyễn Quế Hoàng & B23DCCN339 & Soạn nội dung \\
+\hline
+\end{tabular}
+\end{center}
 %Cô mới thêm vào đoạn này
 %========================================
 
@@ -308,65 +281,12 @@
 
 
 %%%%%%%%%%%%%%%%%%%
-\newpage
-\begin{center}
-	\Large{\textbf{LỜI CẢM ƠN}}\\
-\end{center}
-\vspace{1cm}
-Đây là mục tùy chọn
-
-...........................
-\
- \\
- 
- \
-  \\
- \
-  \\
- 
-\phantom{nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn}\  {\textit{Hà Nội, tháng ....  năm 20....}} \\
-\phantom{nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn} {Sinh viên}\\
-\phantom{nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn} \\
-\phantom{nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn} \\ 
-\phantom{nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn} \\ 
-\phantom{nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn}   {Nguyễn Văn A}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
-\newpage 
-\addcontentsline{toc}{chapter}{\bf  Danh sách hình vẽ} 
-
-\listoffigures
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage 
-\addcontentsline{toc}{chapter}{\bf  Danh sách bảng} 
-\listoftables
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\newpage
-{\addcontentsline{toc}{chapter}{Danh sách các ký hiệu và chữ viết tắt}}
-
-\begin{center}
-	{\LARGE
-		{\bf Danh mục các ký hiệu và chữ viết tắt}}
-\end{center}
-\vspace{1.25cm}
-{\fontsize{13}{13}\selectfont
-	\begin{tabular}{ll}
-		conv$(D)$ & bao lồi của tập hợp $D$\\
-		$\partial ({\rm conv}(D))$ & biên của bao lồi conv$(D)$\\
-		CH($D$) & tập các hình tròn cực biên của tập $D$\\
-		$V_C$ & tập đỉnh của bao lồi conv($C$)\\
-		$[p,q]$ & đoạn thẳng nối $p$ với $q$\\
-		$pq$& đường thẳng đi qua $p$ và $q$\\
-  .......... & ..................
-	\end{tabular}
-}
 
 
  
@@ -378,195 +298,454 @@
 \addcontentsline{toc}{chapter}{\vspace*{-8pt}  Mở đầu} 
 
 
-Hiện nay, công tác quản lý sinh viên bao gồm điểm danh sinh viên ra vào lớp học, xác thực danh tính sinh viên dự thi, kiểm soát sinh viên ra vào cổng trường, ... đều được thực hiện một cách thủ công như quẹt thẻ hoặc có người giám sát. Một sinh viên có thể điểm danh cho nhiều bạn vì hệ thống chỉ nhận diện được thông tin từ thẻ mà không nhận diện được người cầm thẻ, hoặc những người giám sát không thể so sánh, đối chiếu chính xác thông tin của tất cả sinh viên. Việc làm này với số lượng lớn sinh viên sẽ mất thời gian và thường khó đảm bảo sự chính xác cao.
+Bài toán lập kế hoạch đường đi (path planning) là một bài toán tìm kiếm
+một chuỗi các cấu hình hợp lệ để di chuyển một đối tượng từ một trạng thái
+bắt đầu (source/start configuration S hoặc \( x_{\text{init}} \)) đến một trạng thái đích
+(destination/goal configuration G hoặc \( x_{\text{goal}} \) hoặc goal region G(\( x_{\text{goal}} \))).
+Một cách cụ thể hơn, bài toán lập kế hoạch đường đi là tính toán một
+đường đi liên tục tối ưu kết nối trạng thái bắt đầu S và trạng thái đích G,
+đồng thời tránh va chạm với các chướng ngại vật đã biết trong không gian
+trạng thái tự do \( X_{\text{free}} \)
+Bài toán lập kế hoạch tối ưu được định nghĩa là việc tìm kiếm đường đi
+tối thiểu hóa một hàm chi phí (c(σ) hoặc s(σ)) trên đường đi đó, trong số
+tất cả các đường đi hợp lệ. Hàm chi phí thường là chiều dài của đường đi đã
+đi, nhưng cũng có thể là các tiêu chí khác như thời gian thực hiện hoặc năng
+lượng tiêu thụ.
 
 
-Trong thời đại công nghệ thông tin ngày càng phát triển, mọi vấn đề đều được xử lý đơn giản và tối ưu hóa. Công nghệ nhận diện bằng sinh trắc học chính là chìa khóa cho những bài toán nhận diện, trong đó có nhận diện bằng khuôn mặt. Vì vậy, ứng dụng điểm danh trong lớp học sử dụng công nghệ điểm danh bằng khuôn mặt sẽ giúp cho việc điểm danh dễ dàng, nhanh chóng và chính xác hơn rất nhiều so với các phương pháp truyền thống.
 
 
-Mục tiêu của đồ án là tìm hiểu, nghiên cứu các công nghệ nhận diện khuôn mặt và triển khai xây dựng ứng dụng cho bài toán điểm danh sử dụng công nghệ nhận diện khuôn mặt. Ngoài ra, đồ án còn tìm hiểu và phát triển khả năng chống giả mạo cho ứng dụng nhận diện khuôn mặt.
+Trong đề tài của phần này chúng em sẽ trình bày về thuật toán Batch-Informed RRT* (BIT*) nhằm giải quyết bài toán trên
+
+Nội dung gồm các phần sau :
+
+\textbf{Mục 1: Giới thiệu:}
+Giới thiệu qua về Bài toán lập kế hoạch chuyển động và tình hình của một số thuật toán điển hình khác. Giới thiệu BIT* và chỉ ra điểm đặc biệt của BIT*. 
+
+\textbf{Mục 2: Nền tảng chuẩn bị :}
+ Trình bày các kiến thức nền tảng và kỹ năng cần thiết cho việc nghiên cứu và phát triển các thuật toán lập kế hoạch chuyển động.
 
 
-Trong đồ án em sẽ tập trung trình bày một số nội dung chính như sau:
-
-\textbf{Chương 1: Tổng quan về các tác vụ cho bài toán nhận dạng giọng nói:}
-Nội dung chương 1 sẽ khái quát các vấn đề và phương pháp nhận dạng giọng nói, khảo sát về các phương pháp học máy đang được sử dụng cho ba nhiệm vụ con, và trình bày về phạm vi của đồ án.
+\textbf{Mục 3: Thuật toán BIT*:}
+Giới thiệu ý tưởng, giải thích và trình bày thuật toán. Đồng thời nêu mối quan hệ với các thuật toán khác
 
 
-\textbf{Chương 2: Nhận dạng giọng nói bằng mô hình chưng cất và học đa tác vụ:}
-Nội dung của chương 2 sẽ giới thiệu kiến thức cơ bản về trí tuệ nhân tạo và các mạng thần kinh học sâu cũng như các bước xây dựng mô hình chưng cất gọn nhẹ đa tác vụ dựa trên cơ chế chú ý và các kỹ thuật như cắt tỉa mô hình và chưng cất tri thức.
+\textbf{Mục 4: Các mã giả code, kèm link code c++ và demo }
 
 
-\textbf{Chương 3: Thực nghiệm và kết quả:}
-Nội dung của chương 3 trình bày quá trình thu thập dữ liệu, mô tả phương pháp thực nghiệm và đánh giá mô hình chưng cất ứng dụng vào nhận dạng giọng nói và trình bày các kết quả của quá trình thực nghiệm.
+\textbf{Mục 5: So sánh và đánh giá :}
+Dựa trên kết quả thực nghiệm, có thể rút ra các so sánh giữa các thuật toán, đồng thời nêu đánh giá
 
-
-\textbf{Chương 4: Tổng kết:}
-Tổng kết bài toán, tóm tắt những kết quả đã đạt được và còn chưa đạt được. Từ đó đề xuất mục tiêu hướng tới cũng như hướng nghiên cứu, phát triển tiếp theo.
-
-
+\textbf{Mục 6: Ứng dụng:}
+Nêu ứng dụng của thuật toán BIT* trong các vấn đề được đặt ra.
 % ===================================================
 
 
-\chapter{Kiến thức chuẩn bị}
-%\addcontentsline{toc}{chapter}{} 
+\chapter{Giới thiệu}
 
-Chương 1 trình bày phát biểu và chứng minh định lý Fermat nhỏ, định lý Euler. Trình bày khái niệm và cách giải phương trình đồng dư tuyến tính, hệ phương trình đồng dư tuyến tính (định lý thặng dư Trung Hoa). Các kiến thức ở chương này giúp việc trình bày ở chương sau được hệ thống và dễ theo dõi hơn.
-
+\section*{I. Giới thiệu về bài toán lập kế hoạch chuyển động}
 
 
-\section{Thuật toán Quickhull}
-Trong các thuật toán tìm bao lồi thì thuật toán Quickhull \cite{David-2002, Rourke-1998} được biết đến là một thuật toán hiệu quả có độ phức tạp tính toán trung bình là $O(n \log n)$ nhưng trong trường hợp xấu nhất thì độ phức tạp là $O(n^2)$, trong đó $n$ là số điểm của tập điểm đầu vào của thuật toán. Độ phức tạp của thuật toán Quickhull tương tự như thuật toán Quicksort - một thuật toán sắp xếp hiệu quả dựa trên việc phân chia mảng dữ liệu thành các nhóm phần tử nhỏ hơn và thuật toán này chạy trong thực tế nhanh hơn rất nhiều so với trường hợp xấu nhất. Để giải thích cho điều này, V. Damerow và C. Sohler đã đánh giá thành công số điểm cực biên của một tập hợp theo nghĩa Smoothed analysis \cite{Damerow-2004}. Từ đó có thể đánh giá độ phức tạp tính toán của thuật toán Quickhulll theo nghĩa này trong hai trường hợp là:
+
+
+
+
+\section*{Mục tiêu}
+
+Bài toán lập kế hoạch đường đi (path planning) là một vấn đề cốt lõi trong robot, trí tuệ nhân tạo và nhiều ứng dụng thực tiễn. Mục tiêu là tìm một đường đi liên tục từ trạng thái bắt đầu đến trạng thái đích, tránh va chạm với chướng ngại vật trong không gian trạng thái tự do và tối ưu hóa hàm chi phí, chẳng hạn như độ dài đường đi, thời gian hoặc năng lượng tiêu thụ. 
+
+
+\section*{Đầu vào:}
+
+    \textbf{Không gian cấu hình (configuration space):} Biểu diễn tất cả trạng thái hợp lệ của robot.
+    
+     \textbf{Trạng thái bắt đầu và kết thúc.}
+     
+     \textbf{Tập chướng ngại vật:} Các vùng mà robot không được đi vào.
+
+
+\section*{Đầu ra:}
+
+Một đường đi khả thi (có thể tối ưu hoặc không), đảm bảo tránh va chạm và có thể thực thi bởi robot.
+
+\section*{II. Các phương pháp giải điển hình}
+
+\section*{A. Thuật toán lập kế hoạch dựa trên ô (Grid-based)}
+
+ \textbf Ví dụ: 
+ \textbf {A*, Dijkstra}
+
+ \textbf {Ý tưởng}: Chia không gian thành các ô nhỏ và tìm đường như trên bản đồ.
+
+ \textbf {Ưu điểm:}: Dễ hiện thực, tìm được đường tối ưu.
+
+ \textbf {Nhược điểm: }: Không hiệu quả cho không gian lớn hoặc nhiều bậc tự do (high-dimensional C-space).
+
+\section*{B. Thuật toán dựa trên mẫu (Sampling-based)}
+ \textbf {Đây là nhóm thuật toán hiệu quả cho không gian cấu hình lớn và phức tạp.}
+
+
+
+
+
+\begin{table}[H]
+
+
+
+
+\begin{tabular}{|>{\bfseries}m{5cm}|m{9cm}|}
+\hline
+
+
+\textbf{Thuật toán} & \textbf{Đặc điểm} \\
+\hline
+PRM (Probabilistic Roadmap) & Tiền xử lý tạo đồ thị toàn cục → thích hợp cho môi trường tĩnh. \\
+\hline
+RRT (Rapidly-Exploring Random Tree) & Phát triển cây từ điểm bắt đầu, rất nhanh nhưng không tối ưu. \\
+\hline
+RRT* & Phiên bản cải tiến của RRT, đảm bảo hội tụ về lời giải tối ưu theo thời gian. \\
+\hline
+BIT* & Kết hợp RRT* và A*, dùng heuristic để hướng dẫn tìm kiếm → hội tụ nhanh hơn. \\
+\hline
+FMT* (Fast Marching Tree) & Duyệt theo front giống A*, nhanh và hiệu quả với nhiều ràng buộc động học. \\
+\hline
+\end{tabular}
+\end{table}
+
+\section*{C.Thuật toán dựa trên quy hoạch toán học (Optimization-based)}
+
+\textbf Ví dụ: \textbf {CHOMP, TrajOpt, STOMP}
+
+\textbf {Ý tưởng:} Tối ưu hóa quỹ đạo ban đầu để giảm va chạm và chi phí
+
+\textbf {Ưu điểm: }Đường đi mượt và khả thi động học.
+
+\textbf {Nhược điểm: }Dễ mắc kẹt ở cực trị cục bộ.
+
+\section*{III. Giới thiệu thuật toán BIT*}
+
+\textbf {BIT*} là một thuật toán lập kế hoạch chuyển động hiện đại, thuộc nhóm \textbf {sampling-based} (dựa trên lấy mẫu), được đề xuất để \textbf {kết hợp ưu điểm của hai hướng tiếp cận mạnh nhất hiện nay:}
+
+\textbf Từ \textbf {RRT*}: có khả năng mở rộng cây trong không gian cấu hình và hội tụ về đường đi tối ưu theo thời gian.
+
+\textbf Từ \textbf {A*}: sử dụng thông tin heuristic để dẫn hướng quá trình tìm kiếm một cách hiệu quả.
+
+\textbf {Điểm đặc biệt của BIT*}
+
+% bảng
+\begin{table}[h]
+\centering
+
+\renewcommand{\arraystretch}{1.5} % tăng khoảng cách dòng trong bảng
+\begin{tabular}{|>{\raggedright\arraybackslash}p{5.2cm}|>{\raggedright\arraybackslash}p{8.2cm}|}
+\hline
+\textbf{Đặc điểm} & \textbf{Mô tả} \\
+\hline
+\textbf{Batch Sampling (Lấy mẫu theo lô)} & 
+Thay vì lấy từng điểm một như RRT*, BIT* lấy mẫu theo từng lô $\rightarrow$ tăng hiệu quả và kiểm soát tốt hơn việc mở rộng. \\
+\hline
+\textbf{Sử dụng heuristic như A*} & 
+BIT* đánh giá chi phí tiềm năng $f = g + h$, trong đó: \newline
+– $g$: chi phí thực đến một đỉnh trong cây \newline
+– $h$: ước lượng chi phí còn lại đến đích \newline
+$\Rightarrow$ giúp cây mở rộng theo hướng "thông minh", tránh lan tỏa mù mờ như RRT. \\
+\hline
+\textbf{Cấu trúc hàng đợi ưu tiên} & 
+Cạnh và đỉnh được mở rộng theo thứ tự ưu tiên thấp nhất về chi phí dự kiến (giống A*) $\Rightarrow$ tìm được đường ngắn hơn nhanh hơn. \\
+\hline
+\textbf{Chỉ mở rộng những phần có tiềm năng cải thiện lời giải} & 
+BIT* chỉ xem xét những điểm có tổng chi phí nhỏ hơn lời giải tốt nhất hiện tại $c_{best}$, giúp loại bỏ các nhánh không hiệu quả. \\
+\hline
+\textbf{Hội tụ nhanh đến đường đi tối ưu} & 
+Nhờ những cơ chế trên, BIT* thường tìm được lời giải ban đầu nhanh, rồi dần cải thiện về tối ưu giống RRT* nhưng nhanh hơn đáng kể. \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\chapter{Nền tảng chuẩn bị }
+
+Mục này trình bày các kiến thức nền tảng và kỹ năng cần thiết cho việc nghiên cứu và phát triển các thuật toán lập kế hoạch chuyển động. Nội dung được chia thành năm phần chính: toán học nền tảng, kỹ năng lập trình, cấu trúc dữ liệu và thuật toán, cũng như các kiến thức bổ sung nâng cao có thể áp dụng trong thực tế. Mỗi phần cung cấp cơ sở vững chắc giúp người học hiểu rõ nguyên lý hoạt động, khả năng triển khai và tối ưu hóa thuật toán trong môi trường robot phức tạp.
+
+\section*{1. Các định nghĩa và ký hiệu cơ bản}
 \begin{itemize}
-	\item Nhiễu ngẫu nhiên của tập điểm được chọn từ phân bố chuẩn $N(0, \delta)$: 
-	O$\left( n \left(\dfrac{1}{\delta} \right)^2 \log^2 n\right) $.
-	\item Nhiễu ngẫu nhiên được chọn từ phân bố đều trong hình vuông kích thước $2 \epsilon$: 
-	O$\left( n \left(\dfrac{n \log n}{\epsilon} \right)^{2/3}\right). $
+  \item Không gian trạng thái ($X$): Là tập hợp tất cả các cấu hình có thể có của robot hoặc hệ thống, thường là một tập con của $\mathbb{R}^d$, trong đó $d$ là số chiều của không gian.
+  
+  \item Không gian chướng ngại vật ($X_{\text{obs}}$): Vùng không gian bị chiếm bởi các chướng ngại vật.
+  
+  \item Không gian tự do ($X_{\text{free}}$): Phần không gian mà robot có thể di chuyển mà không va chạm, được tính bằng $X_{\text{free}} = X \setminus X_{\text{obs}}$.
+  
+  \item Trạng thái bắt đầu ($x_{\text{start}}$): Cấu hình ban đầu của robot, $x_{\text{start}} \in X_{\text{free}}$.
+  
+  \item Trạng thái đích ($x_{\text{goal}}$): Cấu hình mà robot cần đạt tới, $x_{\text{goal}} \in X_{\text{free}}$.
+  
+  \item Đường đi ($\sigma$): Một chuỗi liên tục các trạng thái kết nối từ trạng thái bắt đầu và trạng thái đích. Một đường đi khả thi là một đường đi không có va chạm và thỏa mãn các điều kiện bắt đầu và kết thúc.
+  
+  \item Hàm chi phí ($c(\sigma)$): Một hàm biểu thị chi phí của việc đi theo đường đi. Chi phí này thường là khoảng cách Euclid giữa hai điểm không có chướng ngại vật trên đường đi, hoặc vô cùng nếu có va chạm.
 \end{itemize}
 
-Bài toán tìm bao lồi có ứng dụng rất quan trọng trong lĩnh vực nhận dạng. Các ứng dụng phổ biến của nhận dạng trong thực tế là nhận dạng tiếng nói tự động, phân loại văn bản thành nhiều loại khác nhau (ví dụ những thư điện tử spam/non-spam), nhận dạng tự động các mã bưu điện viết tay trên các bao thư, hay hệ thống nhận dạng mặt người, nhận dạng biển số xe, v.v\ldots Sau đây ta xét một ứng dụng cụ thể của bài toán tìm bao lồi trong nhận dạng biển số xe. 
-\begin{figure}[ht!]
-	\begin{center}
-		\includegraphics[width=200px]{./nhandang1.PNG}
-		\caption{Quy trình tự động nhận dạng biển số xe.}
-		\label{fig_dhandang1}
-	\end{center}
-\end{figure} 
 
-\section{Sơ lược về ............ }
-\begin{dn}\rm {\it Phương trình đồng dư đại số bậc $n$} là một đồng dư thức có dạng
-\begin{align} \label{ptdd}
-f(x)= a_0x^n + a_1x^{n-1} + \ldots + a_n \equiv 0\pmod{m}
-\end{align}
-trong đó $x$ là ẩn, $a_i \in \mathbb{Z}$ (với $i = 1, 2, \ldots, n$) và $a_0\not\equiv 0\pmod m$.
-\end{dn} 
-\begin{cy}\rm (i) Giải phương trình (\ref{ptdd}) là tìm tất cả các giá trị nguyên của $x$ thoả mãn đồng dư thức (\ref{ptdd}). Nếu $x = x_0$ thoả mãn phương trình (\ref{ptdd}) thì mọi số $x \equiv x_0\pmod{m}$ đều thoả mãn (\ref{ptdd}); trong trường hợp này tập hợp $\{x\in\Z\mid x\equiv x_0\pmod m\}$ được gọi là một {\it nghiệm} của phương trình đồng dư (\ref{ptdd}), kí hiệu là $\overline{x_0}$ hoặc $x\equiv x_0\pmod m$.\par
-\item (ii) Số nghiệm của phương trình (\ref{ptdd}) là số các phần tử trong một hệ thặng dư đầy đủ theo modulo $m$ mà thỏa mãn (\ref{ptdd}).\par
-\item (iii) Hai phương trình đồng dư được gọi là tương đương nếu tập hợp các số nguyên thỏa mãn các phương trình đó là trùng nhau.
-\end{cy}
+ \section*{2. Bán kính kết nối RGG}
 
-\begin{vd} \rm Xét phương trình $x^2 \equiv 1 \pmod{5}$.
-\end{vd}
+Bán kính kết nối RGG, ký hiệu là $r$, xác định khoảng cách tối đa mà hai điểm mẫu được xem xét để kết nối với nhau. Việc lựa chọn bán kính này ảnh hưởng lớn đến tính chất của đồ thị được tạo ra (ví dụ: mật độ kết nối) và khả năng hội tụ của thuật toán đến lời giải tối ưu, cần thiết để đảm bảo tính tối ưu tiệm cận giảm khi số lượng mẫu tăng lên.
 
-\begin{giai} Ta thấy trong các số 0, 1, 2, 3, 4 của hệ thặng dư không âm bé nhất theo modulo 5, có hai số 1 và 4 thỏa mãn phương trình đã cho. Vậy phương trình có hai nghiệm là $x \equiv 1 \pmod{5}$ và $x \equiv 4 \pmod{5}$.
-\end{giai}
+\textbf{Công thức:}
+\[
+r = \gamma \left( \frac{\log q}{q} \right)^{1/d}
+\]
 
-\begin{vd} \rm Giải phương trình đồng dư $x^4 + 7x + 4 \equiv 0\pmod{9}$.
-\end{vd}
-\begin{giai} Dễ thấy phương trình $x^4 + 7x + 4 \equiv 0\pmod{3}$ có nghiệm là $x \equiv 1\pmod{3}$ (hay $x = 3t +1$ với $t\in\Z$). Thay $x$ vào phương trình cần giải và bỏ đi những số hạng chia hết cho 9 ta được
-	\begin{align*}
-	&6t + 3  \equiv 0\pmod{9}\\
-	\Leftrightarrow \ & 2t + 1  \equiv 0\pmod{3}\\
-	\Leftrightarrow \ & t \equiv 1\pmod{3}\\
-		\Leftrightarrow \ & t = 3k +1.
-	\end{align*}
-Vậy phương trình có nghiệm là $x = 3(3k+1) + 1$ hay $x \equiv 4\pmod{9}$.
-\end{giai}
+\textbf{Trong đó:}
+\begin{itemize}
+  \item $\gamma$: Một hằng số điều chỉnh. Giá trị của $\gamma$ phụ thuộc vào đặc tính của không gian trạng thái và hàm chi phí.
+  
+  \item $q$: Tổng số điểm đang được xem xét (bao gồm các đỉnh trong cây $V$ và các mẫu chưa kết nối $X_{\text{unconn}}$).
+  \[
+  q = |V| + |X_{\text{sample}}|
+  \]
+  
+  \item $d$: Số chiều của không gian trạng thái.
+\end{itemize}
 
- \begin{dn} \rm Phương trình đồng dư $ax \equiv b \pmod{m}$ được gọi là {\it phương trình đồng dư tuyến tính} với $a, b, m$ là các số nguyên đã biết. Khi đó $x\equiv x_0\pmod m$ là một nghiệm của phương trình khi và chỉ khi $ax_0 \equiv b\pmod{m}$.
-\end{dn}
+Công thức này cho thấy bán kính $r$ giảm khi số lượng điểm $q$ tăng lên. Điều này đảm bảo rằng khi có nhiều mẫu hơn, thuật toán chỉ cần xem xét các kết nối trong một vùng lân cận nhỏ hơn, giúp giảm chi phí tính toán cho việc kiểm tra va chạm và tìm kiếm lân cận.
 
 
+\section*{3. Hàm Heuristic}
+
+Hàm heuristic ($h(x)$) cung cấp ước lượng chi phí từ một trạng thái $x$ hiện tại đến trạng thái đích $x_{\text{goal}}$. Trong BIT$^*$, heuristic được sử dụng để định hướng quá trình tìm kiếm, ưu tiên mở rộng các đỉnh và xem xét các cạnh có tiềm năng nằm trên đường đi tối ưu.
+
+\textbf{Công thức:} Hàm heuristic thường là khoảng cách Euclid giữa điểm hiện tại và điểm đích.
+\[
+h(n) = \sqrt{(x_{\text{goal}} - x_n)^2 + (y_{\text{goal}} - y_n)^2}
+\]
+(với $h(n)$ bằng $h(x)$, $x_n$ bằng $x$, $y_n = y$)
+
+\begin{itemize}
+  \item Trong bối cảnh tổng quát của BIT$^*$, chi phí ước lượng của một nút hoặc cạnh được kết hợp với chi phí thực tế đã biết từ điểm bắt đầu. Tổng chi phí ước lượng của một đỉnh $x$ là:
+  \[
+  f(x) = g(x) + h(x)
+  \]
+  trong đó $g(x)$ là chi phí thực tế từ $x_{\text{start}}$ đến $x$.
+\end{itemize}
+
+\section*{4. Lấy mẫu có thông tin}
+
+Kỹ thuật lấy mẫu có thông tin tập trung việc lấy mẫu vào một vùng không gian hẹp hơn, cụ thể là bên trong một hình ellipsoid, sau khi một đường đi khả thi đầu tiên được tìm thấy. Vùng ellipsoid này được định nghĩa bởi điểm bắt đầu, điểm đích và chi phí của đường đi tốt nhất hiện tại ($c_{\text{best}}$). Mục đích là chỉ lấy mẫu ở những vị trí có khả năng cải thiện giải pháp hiện tại, loại bỏ các vùng không gian không cần thiết và tăng hiệu quả hội tụ đến nghiệm tối ưu.
+
+\textbf{Công thức:} Các điểm mẫu được lấy sao cho tổng khoảng cách từ điểm mẫu đến điểm bắt đầu và điểm đích nhỏ hơn hoặc bằng $c_{\text{best}}$:
+\[
+\|x - x_{\text{start}}\| + \|x - x_{\text{goal}}\| \leq c_{\text{best}}
+\]
+
+\textbf{Trong đó:}
+\begin{itemize}
+  \item $c_{\text{best}}$: Chi phí của đường đi tốt nhất hiện tại.
+  \item $\|\cdot\|$: Ký hiệu cho chuẩn Euclid.
+\end{itemize}
+
+\section*{5. Cắt tỉa (Pruning)}
+
+\textbf{Mô tả và ý nghĩa:} Cắt tỉa là quá trình loại bỏ các đỉnh và cạnh trong cây tìm kiếm cũng như các điểm mẫu không còn khả năng cải thiện chi phí của đường đi tốt nhất hiện tại ($c_{\text{best}}$). Điều này giúp giảm kích thước của cây và tập mẫu, tập trung tài nguyên tính toán vào các khu vực có tiềm năng tìm thấy đường đi tốt hơn.
+
+\textbf{Công thức:} Một đỉnh $x$ hoặc một mẫu $x$ sẽ bị cắt tỉa nếu thỏa mãn điều kiện:
+\[
+g(x) + h(x) \geq c_{\text{best}}
+\]
+
+\textbf{Trong đó:}
+\begin{itemize}
+  \item $g(x)$: Chi phí thực tế từ $x_{\text{start}}$ đến điểm $x$.
+  \item $h(x)$: Chi phí ước lượng từ điểm $x$ đến $x_{\text{goal}}$ (heuristic).
+  \item $c_{\text{best}}$: Chi phí của đường đi tốt nhất hiện tại.
+\end{itemize}
+
+\section*{6. Kết nối lại (Rewiring)}
+
+\begin{itemize}
+  \item Kết nối lại là một bước trong thuật toán BIT* (kế thừa từ RRT*) nhằm tối ưu hóa cấu trúc của cây tìm kiếm. Khi một đỉnh mới $x_{\text{new}}$ được thêm vào cây hoặc chi phí đến một đỉnh thay đổi, thuật toán kiểm tra các đỉnh lân cận ($x_{\text{neighbor}}$) của $x_{\text{new}}$ để xem liệu việc thay đổi cha của $x_{\text{neighbor}}$ thành $x_{\text{new}}$ có tạo ra một đường đi từ gốc đến $x_{\text{neighbor}}$ có chi phí thấp hơn hay không. Nếu có và đường đi mới không có va chạm, cây sẽ được cập nhật bằng cách thay đổi cạnh nối đến $x_{\text{neighbor}}$.
+  
+  \item \textbf{Công thức:} Chi phí đến một đỉnh $x_{\text{new}}$ thông qua một đỉnh lân cận $x_{\text{near}}$ được tính và so sánh với chi phí hiện tại đến $x_{\text{new}}$:
+\end{itemize}
+
+\begin{center}
+  \textbf{Công thức Rewiring:}
+  \[
+  \text{cost}(x_{\text{new}}) = \min \left\{ \text{cost}(x_{\text{near}}) + c(x_{\text{near}}, x_{\text{new}}) \right\}
+  \]
+\end{center}
+
+\textbf{Giải thích:}
+\begin{itemize}
+  \item $x_{\text{new}}$: điểm mới muốn thêm vào cây.
+  \item $x_{\text{near}}$: các điểm “gần” trong cây hiện tại.
+  \item $c(x_{\text{near}}, x_{\text{new}})$: chi phí từ $x_{\text{near}}$ đến $x_{\text{new}}$.
+  \item $\text{cost}(x_{\text{new}})$: tổng chi phí tốt nhất từ gốc đến $x_{\text{new}}$.
+\end{itemize}
+
+
+ \chapter{Thuật toán BIT* }
+\section{Ý tưởng chính của BIT*}
+
+BIT* (Batch Informed Trees*) là một thuật toán lập kế hoạch chuyển động tối ưu, kết hợp giữa:
+
+\begin{itemize}
+    \item \textbf{RRT*}: khả năng tìm đường trong không gian lớn và hội tụ về lời giải tối ưu theo thời gian.
+    \item \textbf{A*}: sử dụng heuristic (ước lượng chi phí) để hướng dẫn việc mở rộng cây theo hướng ưu tiên.
+\end{itemize}
+
+\textbf{Ý tưởng chính:}
+\begin{itemize}
+    \item Lấy mẫu ngẫu nhiên theo lô (\textit{batch sampling}) thay vì từng điểm một.
+    \item Chỉ tập trung vào vùng có khả năng cải thiện lời giải hiện tại.
+    \item Duyệt các đỉnh và cạnh theo chi phí dự kiến $f = g + h$ như trong A*.
+\end{itemize}
+
+\section{Các bước của thuật toán BIT*}
+
+\subsection*{Khởi tạo:}
+\begin{itemize}
+    \item Tạo cây tìm đường chứa đỉnh xuất phát.
+    \item Đặt chi phí tốt nhất hiện tại $c_{best} = \infty$.
+    \item Khởi tạo hàng đợi ưu tiên.
+\end{itemize}
+
+\subsection*{Lặp lại cho đến khi hết thời gian hoặc hội tụ:}
+
+\begin{enumerate}
+    \item Nếu hàng đợi rỗng:
+    \begin{itemize}
+        \item Tạo lô mẫu mới trong không gian cấu hình.
+        \item Lọc các mẫu có $f(x) = g(x) + h(x) < c_{best}$.
+        \item Thêm các mẫu vào tập đỉnh chưa mở rộng.
+        \item Cập nhật danh sách cạnh khả thi.
+    \end{itemize}
+
+    \item Trong khi hàng đợi chưa rỗng:
+    \begin{itemize}
+        \item Lấy cạnh có chi phí nhỏ nhất từ hàng đợi.
+        \item Nếu $g(v) + h(x) > c_{best}$: bỏ qua cạnh.
+        \item Nếu $x$ chưa có trong cây:
+        \begin{itemize}
+            \item Thêm đỉnh $x$ vào cây qua cạnh tốt nhất $(v, x)$.
+            \item Nếu $x$ là đích $\rightarrow$ cập nhật $c_{best}$.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Kết thúc:}
+Trả về đường đi ngắn nhất tìm được.
+
+\section{Giải thích thuật toán}
+
+\begin{itemize}
+    \item \textbf{Batch sampling} giúp duyệt không gian hiệu quả hơn so với RRT*.
+    \item BIT* giống A* hoạt động trên không gian liên tục, kết hợp với cấu trúc cây của RRT.
+    \item Thay vì mở rộng tất cả điểm như PRM hay RRT*, BIT* chỉ mở rộng những điểm có tiềm năng cải thiện lời giải hiện tại.
+    \item Sau khi có lời giải đầu tiên, BIT* tiếp tục cải thiện, hội tụ dần về tối ưu.
+\end{itemize}
+
+\section{ Mối quan hệ với các thuật toán khác}
+
+\begin{center}
+\begin{tabular}{|c|m{10cm}|}
+\hline
+\textbf{Thuật toán} & \textbf{Mối quan hệ với BIT*} \\
+\hline
+\textbf{RRT*} & BIT* kế thừa khung cây mở rộng từ RRT* và đảm bảo hội tụ tối ưu. Tuy nhiên, BIT* mở rộng theo batch và có hướng dẫn heuristic. \\
+\hline
+\textbf{A*} & BIT* mượn chiến lược duyệt đỉnh theo chi phí $f = g + h$, ưu tiên mở rộng đỉnh hứa hẹn hơn, giúp nhanh hội tụ hơn. \\
+\hline
+\textbf{PRM*} & PRM* xây dựng đồ thị toàn cục trước rồi mới tìm đường. BIT* duyệt theo từng batch, hiệu quả hơn trong môi trường phức tạp. \\
+\hline
+\textbf{FMT*} & FMT* cũng duyệt theo chi phí như A*, nhưng BIT* sử dụng hàng đợi ưu tiên và mở rộng đỉnh linh hoạt hơn. \\
+\hline
+\end{tabular}
+\end{center}
+
+\chapter{Các mã giả code, kèm link code Python và demo }
+\section*{Link code:}
+\url{https://github.com/nvbangg/TRR2_BITstar/blob/main/Nh%C3%B3m%2014.3/BITstar.py}
+
+\begin{center}
+      \includegraphics[width= 1\textwidth]{anh1.1.png}
+        \includegraphics[width= 1\textwidth]{anh1.2.png}
+        \includegraphics[width= 1\textwidth]{anh1.3.png}
+         \includegraphics[width= 1\textwidth]{anh1.4.png}
+        \includegraphics[width= 1\textwidth]{anh1.5.png}
+        \includegraphics[width= 1\textwidth]{anh1.6.png}
+        \includegraphics[width= 1\textwidth]{anh1.7.png}
+        \includegraphics[width= 1\textwidth]{anh1.8.png}
+    \includegraphics[width= 1\textwidth]{anh1.9.png}
+    \includegraphics[width= 1\textwidth]{anh2.0.png}
+    \includegraphics[width= 1\textwidth]{anh2.1.png}
+    \includegraphics[width= 1\textwidth]{anh2.2.png}
+\end{center}
 
 
 
-\chapter{Ứng dụng .................}
 
-Chương này trình bày định nghĩa và các tính chất của thặng dư bậc hai: cách tính thặng dư bằng định nghĩa, cách tính thặng dư thông qua ký hiệu Legendre, cách tính thông qua luật thuận nghịch bậc hai. Sau đó ứng dụng thặng dư bậc hai và luật thuận nghịch bậc hai để tính toán và giải một số bài toán chứng minh, tìm căn nguyên thủy, kiểm tra tính nguyên tố.  
+\section*{Demo video:}
 
-\section{Thặng dư bậc hai và ứng dụng}
-Thặng dư bậc hai đóng vai trò rất quan trọng trong lý thuyết số. Chẳng hạn, thuật toán phân tích số nguyên ra thừa số nguyên tố. Ngoài ra thặng dư bậc hai cũng ứng dụng lớn trong mật mã cũng như trong các giao thức mã hóa.... Ở đây ta xét ứng dụng liên quan đến giải phương trình đồng dư bậc hai trong lý thuyết và thực hành.
- 
-\subsection{Phương trình đồng dư bậc hai..........}
-Xét phương trình đồng dư bậc hai theo modulo nguyên tố (theo tài liệu \cite{K2007}).
-\begin{align}\label{pt7.1}
-Ax^2 + Bx + C \equiv 0 \pmod{p},
-\end{align}
-trong đó $p$ nguyên tố lẻ và $A, B, C \in \mathbb{Z}$ với $p\nmid A$. (Nếu $p\mid A$ thì quay về phương trình tuyến tính). Vì $p$ nguyên tố lẻ và $p\nmid A$, nên $p\nmid 4A$. Ta nhân hai vế của phương trình với $4A$ ta được
-\begin{equation}\label{pt7.2}
-4A(Ax^2+Bx+C)\equiv 0\pmod p.
-\end{equation}
-Nhưng ta có 
-\begin{align*}
-4A(Ax^2+Bx+C)&=4A^2x^2+4ABx+4AC\\
-&=(2Ax+B)^2-(B^2-4AC).
-\end{align*}
-Do đó đồng dư thức (\ref{pt7.2}) được viết lại thành
-\begin{align*}
-(2Ax+B)^2\equiv (B^2-4AC)\pmod p
-\end{align*}
-nó có dạng 
-\begin{align}\label{pt7.3}
-y^2\equiv a\pmod p
-\end{align}
- trong đó $y=2Ax+B$ và $a=B^2-4AC$.\par 
-Nếu phương trình $y^2\equiv a\pmod p$ có nghiệm, thì ta suy ra phương trình $2Ax+B=y$ có nghiệm $x$ modulo $p$ (vì $(2A,p)=1$). Do đó phương trình (\ref{pt7.1}) có nghiệm nếu và chỉ nếu phương trình (\ref{pt7.3}) có nghiệm.\par
+\url{https://www.youtube.com/watch?v=sq4HM6zaMdQ}
 
-Ví dụ sau sẽ minh họa điều này.
+\section*{Mã giả:}
+\begin{algorithm}
+\caption{Thuật toán mở rộng đồ thị tìm đường đi tối ưu}
+\begin{algorithmic}[1]
+\State Khởi tạo tập đỉnh $V \gets \{X_{\text{start}}\}$; $E \gets \emptyset$; $T \gets (V, E)$
+\State $X_{\text{unconn}} \gets X_{\text{goal}}$ \Comment{Tạo mẫu rỗng}
+\State $QV \gets V$; $QE \gets \emptyset$
+\State $V_{\text{sol'n}} \gets V \cap \{X_{\text{goal}}\}$; $V_{\text{unexpnd}} \gets V$
+\State $X_{\text{new}} \gets X_{\text{unconn}}$
+\State $V_{\text{open}} \gets V \cup \{X_{\text{goal}}\}$
+\State $V_{\text{expanded}} \gets V$
+\State $c_i \gets \min_{v_{\text{goal}} \in V_{\text{sol'n}}} \{g_T(v_{\text{goal}})\}$
 
-	{\fontsize{12pt}{12pt}\selectfont \baselineskip 0.65cm
-	\renewcommand{\baselinestretch}{1.0}	
-	\begin{algorithm}[ht!]
-		
-		\floatname{algorithm}{Thuật toán}
-		\caption{\textsc{Thuật toán tìm bao lồi dưới} $\hbox{conv}_L(P)$}  \label{al-blduoi}
-		\textbf{Đầu vào: }Cho $P=\{p_i=(x_i,y_i,z_i)\in \mathbb{R}^3,\ i=1,\dots,n\}, n\ge 3$.\\
-		\textbf{Đầu ra:} Tập ${\cal Q}$ tất cả các mặt dưới của $\hbox{conv}_L(P)$.
-		
-		\begin{algorithmic}[1]
-			
-			
-			\State Tìm cạnh đầu tiên $e_0$ của $\hbox{conv}_L(P)$. 
-			\State Xét hàng đợi ${\cal Q}:=\emptyset$ và tập ${\cal E}_L(P):=\emptyset$.
-			
-			\State Gọi {\bf LFRes}($e, P$) để nhận được một mặt dưới $F_e$ qua $e_0$. Đẩy các cạnh của $F_e$  trừ $e_0$ vào trong ${\cal E}_L(P)$. Đẩy $F_e$ vào trong tập ${\cal Q}$.
-			
-			\State  {\bf while} $({\cal Q}\ne\emptyset)$ {\bf do}
-			
-			\State 
-			\quad \quad Lấy $F_e$ từ phía trên của  ${\cal Q}$.
-			
-			\State 	\quad \quad \quad \quad $T:=$ tập các cạnh $F_e$.
-			
-			\State 	\quad \quad \quad \quad {\bf for each} $e \in T\cap  {\cal E}_L(P)$ {\bf do}
-			
-			\State 
-			\quad \quad\quad \quad\quad \quad Gọi {\bf LFRes}($e, P$) để nhận được mặt $F'_e$ có chung cạnh $e$ với $F_e$. \hspace*{2.5cm}Đưa vào ${\cal E}_L(P)$ tất cả các cạnh $e' \ne e_0$ của $F'_e$ chưa xuất hiện trong \hspace*{2.5cm} ${\cal E}_L(P)$ và xoá các cạnh đã xuất hiện trong ${\cal E}_L(P)$. Đẩy $F'_e$ vào ${\cal Q}$.
-		
-			
-		\end{algorithmic}
-	\end{algorithm}
-}
+\While{không dừng}
+    \If{$QE = \emptyset$ \textbf{và} $QV = \emptyset$}
+        \State $X_{\text{reuse}} \gets \text{Prune}(T, X_{\text{unconn}}, c_i)$
+        \State $X_{\text{sampling}} \gets \text{Sample}(m, X_{\text{start}}, X_{\text{goal}}, c_i)$
+        \State $X_{\text{new}} \gets X_{\text{reuse}} \cup X_{\text{sampling}}$
+        \State $X_{\text{unconn}} \gets X_{\text{unconn}} \cup X_{\text{new}}$
+        \State $QV \gets V$
+    \EndIf
 
-	\chapter{Một số kết quả tính toán }
-Trong nội dung này chúng tôi thử nghiệm số cho thuật toán trong \cite{An-Giang} và thuật toán vừa được trình bày ở mục trước để so sánh tốc độ của chúng. Các thuật toán này được thực thi bởi chương trình C và chạy trên PC Core i5 1.6 GHz 3M với 4 GB RAM.  
+    \While{BestQueueValue($QV$) $\leq$ BestQueueValue($QE$)}
+        \State \text{ExpandNextVertex}($QV$, $QE$, $c_i$)
+    \EndWhile
 
-Dưới đây Bảng \ref{tab:51} minh họa thời gian chạy (đơn vị tính bằng giây) của thuật toán tính bao lồi dưới được giới thiệu bởi P. T. An và D. T. Giang trong \cite{An-Giang} và Thuật toán \ref{al-matduoi} sử dụng kỹ thuật hạn chế của chúng tôi. Cột cuối cùng liệt kê tỉ lệ tăng tốc của thuật toán của chúng tôi so với thuật toán trong \cite{An-Giang}. Dữ liệu đầu vào của các thuật toán là các tập điểm được tạo trên bề mặt một paraboloid (tất cả các điểm đều là đỉnh của bao lồi và bao lồi dưới) có dạng $P = \{p_i = (x_i, y_i, z_i): x_i, y_i, z_i \in \mathbb{R}, z_i = x_i^2 + y_i^2, i = 1, \ldots, n\} \subset \mathbb{R}^3,$ trong đó tập $\{(x_i, y_i), x_i, y_i \in R, i = 1, \ldots , n \}$ được chọn ngẫu nhiên từ phân bố đều trong hình vuông cỡ 200 $\times$ 200. 
+    \State $(v_{\min}, x_{\min}) \gets \text{popBestInQueue}(QE)$
 
-{\fontsize{12pt}{12pt}\selectfont \baselineskip 0.65cm
-	\renewcommand{\baselinestretch}{1}
-	\begin{table}[ht!]
-		\begin{center}
-			\caption{Thời gian chạy tính bao lồi dưới (đơn vị: giây).}
-			\label{tab:51}
-			\begin{tabular}{cccc}
-				\hline
-				{Đầu vào} &{Thuật toán trong} \cite{An-Giang} & {Thuật toán} \ref{al-blduoi}& Tỉ số thăng tốc\\
-				\hline
-				1.000 & 0,136& 0,061&2,23\\ 
-				2.000 & 0,454& 0,248 &1,83\\  
-				5.000 & 2,684& 1,500 &1,79\\  
-				7.000 & 7,014& 3,129 &2,24\\ 
-				11.000  & 14,321& 8,484 &1,69\\ 
-				17.000  & 41,307& 24,666 &1,67\\ 
-				20.000 & 63,197& 37,332 &1,69\\  
-				22.000 & 70,866& 40,235 & 1,76\\ 
-				30.000 & 153,240& 96,738 &1,58\\ 
-				35.000& 200,496& 125,490& 1,60\\ \hline	
-			\end{tabular}	
-		\end{center}
-	\end{table}	
-}
+    \If{không va chạm $(v_{\min}, x_{\min})$ \textbf{và} $g_T(v_{\min}) + c(v_{\min}, x_{\min}) + \hat{h}(x_{\min}) < c_i$}
+        \State $c_{\text{edge}} \gets c(v_{\min}, x_{\min})$
+        \If{$g_T(v_{\min}) + c_{\text{edge}} + \hat{h}(x_{\min}) < c_i$}
+            \If{$g_T(v_{\min}) + c_{\text{edge}} < g_T(x_{\min})$}
+                \If{$x_{\min} \in V$}
+                    \State \text{Cập nhật cạnh cha mới, xóa cạnh cũ}
+                    \State $E \gets \text{parent}(x_{\min})$
+                \Else
+                    \State $X_{\text{unconn}} \gets X_{\text{unconn}} \setminus \{x_{\min}\}$
+                    \State $V \gets V \cup \{x_{\min}\}$
+                    \State $QV \gets QV \cup \{x_{\min}\}$
+                    \State $V_{\text{unexpnd}} \gets V_{\text{unexpnd}} \cup \{x_{\min}\}$
+                \EndIf
+                \If{$x_{\min} \in X_{\text{goal}}$}
+                    \State $V_{\text{sol'n}} \gets V_{\text{sol'n}} \cup \{x_{\min}\}$
+                \EndIf
+                \State $E \gets E \cup \{(v_{\min}, x_{\min})\}$
+                \State $c_i \gets \min_{v_{\text{goal}} \in V_{\text{sol'n}}} \{g_T(v_{\text{goal}})\}$
+            \Else
+                \State $QE \gets \emptyset$; $QV \gets \emptyset$
+            \EndIf
+        \EndIf
+    \EndIf
+\EndWhile
+
+\State \Return $T$
+\end{algorithmic}
+\end{algorithm}
+
+
+\
 
 
 
@@ -574,40 +753,140 @@ Dưới đây Bảng \ref{tab:51} minh họa thời gian chạy (đơn vị tín
 
 
 
-\chapter*{{Kết luận}}
-\addcontentsline{toc}{chapter}{\vspace*{-8pt} Kết luận}
 
- Trong quá trình thực tập, em đã có cơ hội làm quen một môi trường làm việc mới. Em đã tính lũy những kinh nghiệm về kiến thức trong công việc cũng như các kinh nghiệm về kỹ năng mềm.
- 
- Em được rèn luyện kĩ năng giải quyết công việc theo từng giai đoạn, cố gắng hoàn thành công việc trong thời gian cho phép, mạnh dạn trao đổi và chia sẻ kiến thức. Đồng thời cũng bồi dưỡng thêm rất nhiều kiến thức ngoài các kiến thức đã học trên trường.
- 
 
+
+
+\chapter{So sánh và đánh giá}
+
+\section*{So sánh}
+
+Dựa trên kết quả thực nghiệm, có thể rút ra các so sánh chính sau:
+
+\subsection*{BIT* vs RRT và các biến thể (Informed RRT*, RRT\#, SORRT*)}
+
+\begin{itemize}
+    \item \textbf{Tốc độ hội tụ và chất lượng giải pháp:} BIT* thường hội tụ nhanh hơn và đạt được giải pháp có chi phí thấp hơn trong cùng một khoảng thời gian, đặc biệt rõ rệt ở số chiều cao. Điều này là do BIT* sử dụng heuristic để sắp xếp thứ tự tìm kiếm một cách hiệu quả (giống A*) và xử lý mẫu theo lô, thay vì tìm kiếm ngẫu nhiên như RRT*. Informed RRT* và SORRT* cố gắng cải thiện RRT* bằng cách tập trung lấy mẫu hoặc sắp xếp mẫu, nhưng BIT* với việc xem xét nhiều kết nối trên đồ thị ẩn RGG tỏ ra hiệu quả hơn trong các bài toán phức tạp.
+    \item \textbf{Thời gian giải pháp ban đầu:} BIT* có thể mất nhiều thời gian hơn một chút để tìm giải pháp ban đầu so với RRT* trong một số trường hợp đơn giản (do chi phí quản lý lô và hàng đợi), nhưng thường nhanh hơn trong các bài toán phức tạp hoặc số chiều cao nhờ tìm kiếm có hướng.
+    \item \textbf{Khả năng mở rộng:} BIT* thể hiện khả năng mở rộng tốt hơn RRT* khi số chiều tăng lên.
+\end{itemize}
+
+\subsection*{BIT* vs FMT*}
+
+\begin{itemize}
+    \item \textbf{Tính Anytime:} BIT* là thuật toán anytime, liên tục cải thiện giải pháp theo thời gian, trong khi FMT* thì không (chỉ trả về giải pháp khi hoàn thành tìm kiếm trên số mẫu cố định).
+    \item \textbf{Hiệu quả tìm kiếm:} Cả hai đều sử dụng tìm kiếm có thứ tự trên tập mẫu. FMT* tìm kiếm theo chi phí đến (cost-to-come), còn BIT* tìm kiếm theo chi phí giải pháp ước tính (giống A*). BIT* có thể hiệu quả hơn nhờ heuristic và khả năng tái sử dụng thông tin giữa các lô.
+    \item \textbf{Chất lượng giải pháp:} Với cùng số lượng mẫu hoặc thời gian tính toán tương đương, BIT* thường cho kết quả cuối cùng tốt hơn hoặc tương đương FMT* nhờ khả năng cải thiện liên tục và tập trung vào vùng informed set.
+\end{itemize}
+
+\subsection*{BIT* vs RRT-Connect}
+
+\begin{itemize}
+    \item \textbf{Tốc độ vs. Tối ưu:} RRT-Connect thường là thuật toán nhanh nhất tìm ra một giải pháp khả thi ban đầu do tìm kiếm hai chiều. Tuy nhiên, giải pháp này thường xa tối ưu và không được cải thiện. BIT* tuy có thể chậm hơn một chút ban đầu nhưng đảm bảo hội tụ về giải pháp tối ưu và liên tục cải thiện chất lượng. Trong nhiều trường hợp phức tạp (ví dụ: HERB 14-DOF), BIT* thậm chí còn nhanh hơn RRT-Connect để tìm giải pháp ban đầu.
+\end{itemize}
+
+\subsection*{Ảnh hưởng của kích thước lô trong BIT*}
+
+\begin{itemize}
+    \item Kích thước lô nhỏ (ví dụ: $m = 1$) làm BIT* hoạt động giống Informed RRT*.
+    \item Kích thước lô lớn làm BIT* hoạt động giống FMT* hơn (nếu chỉ chạy 1 lô).
+    \item Kích thước lô trung bình (ví dụ: $m = 100$) dường như mang lại sự cân bằng tốt giữa tốc độ tìm giải pháp ban đầu và tốc độ hội tụ (Hình 16 trong~\cite{ref11}). Việc giảm kích thước lô có thể giảm thời gian tìm giải pháp ban đầu đến một ngưỡng nhất định nhưng cũng có thể làm chậm tốc độ hội tụ, đặc biệt ở số chiều cao.
+\end{itemize}
+
+\section*{Đánh giá}
+
+BIT* nổi lên như một thuật toán lập kế hoạch đường đi mạnh mẽ, kết hợp thành công các ưu điểm của phương pháp dựa trên tìm kiếm đồ thị (có thứ tự, hiệu quả) và phương pháp dựa trên lấy mẫu (anytime, tối ưu tiệm cận, khả năng mở rộng).
+
+\subsection*{Ưu điểm của BIT*}
+
+\begin{itemize}
+    \item \textbf{Tối ưu tiệm cận và hoàn chỉnh xác suất:} Đảm bảo về mặt lý thuyết sẽ hội tụ đến giải pháp tối ưu nếu tồn tại.
+    \item \textbf{Hiệu suất Anytime:} Nhanh chóng tìm ra giải pháp khả thi và liên tục cải thiện chất lượng theo thời gian, phù hợp cho các ứng dụng có giới hạn thời gian.
+    \item \textbf{Tìm kiếm có thông tin và hiệu quả:} Việc sử dụng heuristic và tập trung lấy mẫu vào vùng informed set giúp BIT* tìm kiếm hiệu quả hơn nhiều so với tìm kiếm ngẫu nhiên của RRT*, đặc biệt trong không gian trạng thái phức tạp và số chiều cao. Nó tránh lãng phí tài nguyên vào các vùng không gian không hứa hẹn.
+    \item \textbf{Xử lý theo lô và tái sử dụng thông tin:} Cho phép tìm kiếm có thứ tự trên không gian liên tục và tái sử dụng thông tin từ các lô trước, tăng tốc độ hội tụ.
+    \item \textbf{Khả năng mở rộng tốt:} Các thí nghiệm cho thấy BIT* hoạt động tốt hơn các thuật toán khác khi số chiều của không gian trạng thái tăng lên.
+    \item \textbf{Ít nhạy cảm với tham số:} So với RRT* (phụ thuộc nhiều vào độ dài cạnh tối đa), BIT* (với kích thước lô $m=100$) tỏ ra ổn định trên nhiều loại bài toán~\cite{ref11}.
+\end{itemize}
+
+\subsection*{Nhược điểm của BIT*}
+
+\begin{itemize}
+    \item \textbf{Độ phức tạp:} BIT* phức tạp hơn trong việc triển khai so với RRT* do quản lý hai hàng đợi, xử lý lô và các cơ chế tỉa cây, đánh dấu trạng thái.
+    \item \textbf{Ảnh hưởng của Heuristic:} Hiệu suất của BIT* phụ thuộc vào chất lượng của hàm heuristic. Một heuristic tốt sẽ giúp hội tụ nhanh hơn, nhưng một heuristic kém có thể không mang lại nhiều lợi ích so với tìm kiếm không có thông tin. Tuy nhiên, ngay cả với heuristic zero (tương đương Dijkstra), BIT* vẫn hoạt động.
+    \item \textbf{Chi phí quản lý lô:} Việc xử lý mẫu theo lô và cập nhật hàng đợi có thể tạo ra chi phí tính toán nhất định, có thể làm chậm thời gian tìm giải pháp ban đầu trong các bài toán rất đơn giản so với RRT*.
+    \item \textbf{Kết nối cạnh:} BIT* xem xét nhiều kết nối tiềm năng cho mỗi mẫu trong RGG ẩn. Điều này giúp tìm ra đường đi tốt hơn nhưng cũng có thể tốn chi phí nếu nhiều kết nối bị chặn bởi chướng ngại vật. Các biến thể như SORRT* hoặc cơ chế loại bỏ mẫu (sample removal) có thể giảm bớt vấn đề này nhưng có thể ảnh hưởng đến việc khai thác các mẫu hữu ích.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\chapter{Ứng dụng }
+\section*{Ứng dụng của BIT*}
+
+\begin{itemize}
+    \item \textbf{Tìm đường đi tối ưu trong đồ thị có trọng số:}  
+    BIT* có thể áp dụng để tìm đường ngắn nhất có ràng buộc, tương tự như Dijkstra hoặc A*, nhưng hiệu quả hơn khi không gian trạng thái lớn nhờ kết hợp heuristic và sampling.
+
+    \item \textbf{Tối ưu bài toán rời rạc có không gian trạng thái lớn:}  
+    BIT* sử dụng heuristic và sampling có định hướng để tìm nghiệm gần tối ưu cho các bài toán như lập lịch, phân công tài nguyên, routing trong mạng.
+
+    \item \textbf{Mô hình hóa bài toán điều khiển rời rạc:}  
+    BIT* giúp tìm đường đi cho robot hoặc hệ thống trong không gian lưới, tránh chướng ngại vật và tối ưu chi phí di chuyển.
+
+    \item \textbf{Giảng dạy kỹ thuật heuristic và cấu trúc dữ liệu:}  
+    BIT* là ví dụ minh họa rõ ràng cho việc kết hợp hàng đợi ưu tiên, heuristic, và cập nhật động trong các bài toán tổ hợp.
+\end{itemize}
+
+\section*{Kết luận}
+
+BIT* là một bước tiến quan trọng trong lĩnh vực lập kế hoạch đường đi dựa trên lấy mẫu.  
+Bằng cách tích hợp tìm kiếm có hướng heuristic vào một quy trình xử lý mẫu theo lô và tính chất \textit{anytime}, BIT* cung cấp sự cân bằng tuyệt vời giữa tốc độ hội tụ, chất lượng giải pháp và khả năng mở rộng.
+
+Thuật toán này đặc biệt phù hợp cho các bài toán lập kế hoạch phức tạp, có số chiều cao trong robotics, nơi việc tìm kiếm đường đi tối ưu hoặc gần tối ưu một cách nhanh chóng là rất quan trọng. Các kết quả thực nghiệm trên cả môi trường mô phỏng và hệ thống robot thực tế đã chứng minh tính ưu việt của BIT* so với nhiều thuật toán tiên tiến khác.
 
 
 
 \begin{thebibliography}{30}
 \addcontentsline{toc}{chapter}{\vspace*{-8pt} Tài liệu tham khảo}
-	
-\subsection*{Tiếng Việt}
 
-\bibitem{G2016} Vũ Thị Gái (2016), \textit{Luật thuận nghịch bậc hai và điểm nguyên}, trường Đại học Khoa học, Đại học Thái Nguyên.
+\section*{Bài báo gốc về BIT*}
 
-\bibitem{D2005} Nguyễn Tiến Hùng (2016), \textit{Luật thuận nghịch bậc hai và hoán vị}, trường Đại học Khoa học, Đại học Thái Nguyên.
+\begin{itemize}
+    \item \textbf{Tên bài:} \textit{"Batch Informed Trees (BIT*): Sampling-based Optimal Planning via the Heuristically Guided Search of Implicit Random Geometric Graphs"}
+    \item \textbf{Tác giả:} Jonathan D. Gammell, Siddhartha S. Srinivasa, Timothy D. Barfoot
+    \item \textbf{Năm:} 2015
+    \item \textbf{Link:} \href{https://arxiv.org/abs/1405.5848}{https://arxiv.org/abs/1405.5848}
+\end{itemize}
 
+Đây là tài liệu \textbf{quan trọng nhất}, trình bày đầy đủ ý tưởng, phân tích và so sánh BIT* với các thuật toán khác.
 
-\bibitem{K1997} Hà Huy Khoái (1997), \textit{Nhập môn số học thuật toán}, Nhà xuất bản Khoa học Kỹ thuật.
+\section*{Sách tham khảo}
 
-\bibitem{LDT} Lại Đức Thịnh (1977), {\it Giáo trình số học}, Nhà xuất bản Giáo dục.
-	
-\subsection*{Tiếng Anh}
-	\bibitem{An-Giang} P. T. An and D. T. Giang (2015), ``A direct method for determining the lower convex hull of a finite point set in 3D'', Advances in Intelligent Systems and Computing, \textit{Springer}, Proceedings of 3rd International Conference on Computer Science, Applied Mathematics and Applications (ICCSAMA, May 11-13, Metz, France) \textbf{358},  pp. 15--26.
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+    \item \textbf{\textit{Planning Algorithms} – Steven M. LaValle}
+    
+    \begin{itemize}
+        \item Một cuốn sách \textbf{kinh điển}, bao quát nhiều chủ đề về lập kế hoạch chuyển động: motion planning, discrete planning, planning under uncertainty,...
+        \item \textbf{Link tải miễn phí} (tác giả cung cấp): \href{http://lavalle.pl/planning/}{http://lavalle.pl/planning/}
+    \end{itemize}
+\end{itemize}
 
+\section*{Khóa học và bài giảng online}
 
-\bibitem{Damerow-2004} V. Damerow and C. Sohler (2004), ``Extreme points under random noise'', \textit{Eropean Symposium on Algorithms} {\bf 3221}, pp. 264--274.
-\bibitem{David-2002}  M. M. David (2002), \textit{Computation geometry}, Department of Computer Science.
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+    \item \textbf{\textit{CS287: Advanced Robotics – UC Berkeley}}
+    \begin{itemize}
+        \item Giảng viên: Pieter Abbeel
+        \item Có bài giảng video về sampling-based planning và trajectory optimization.
+        \item YouTube playlist: \href{https://www.youtube.com/playlist?list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A}{https://www.youtube.com/playlist?list=PLkFD6\_40KJIwhWJpGazJ9VSj9CFMkb79A}
+    \end{itemize}
+\end{itemize}
 
-\bibitem{Rourke-1998} J. O' Rourke (1998), \textit{Computational geometry in C}, 2nd edition, Cambridge University Press, Cambridge. 
-	
 \end{thebibliography} 
 \end{document}
  
